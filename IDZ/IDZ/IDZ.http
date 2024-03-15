@@ -1,0 +1,6 @@
+@IDZ_HostAddress = http://localhost:5023
+
+GET {{IDZ_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

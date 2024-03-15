@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDZ", "IDZ\IDZ.csproj", "{1B1DC8F1-7D8C-4DBA-BCFD-868AF789ABB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "AuthService\AuthService.csproj", "{6F130CA6-C912-48BD-BB93-60AB79AB805E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{32BED18B-1552-4899-8CF9-DFAEAC2A5C8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B1DC8F1-7D8C-4DBA-BCFD-868AF789ABB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1DC8F1-7D8C-4DBA-BCFD-868AF789ABB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1DC8F1-7D8C-4DBA-BCFD-868AF789ABB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1DC8F1-7D8C-4DBA-BCFD-868AF789ABB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F130CA6-C912-48BD-BB93-60AB79AB805E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F130CA6-C912-48BD-BB93-60AB79AB805E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F130CA6-C912-48BD-BB93-60AB79AB805E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F130CA6-C912-48BD-BB93-60AB79AB805E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BED18B-1552-4899-8CF9-DFAEAC2A5C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BED18B-1552-4899-8CF9-DFAEAC2A5C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BED18B-1552-4899-8CF9-DFAEAC2A5C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BED18B-1552-4899-8CF9-DFAEAC2A5C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64EB5659-87FB-4B68-A4D6-501DFD3CAD7F}
+	EndGlobalSection
+EndGlobal

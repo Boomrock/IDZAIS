@@ -1,0 +1,52 @@
+version: '3.4'
+networks:
+  authnetwork:
+
+services:
+  authservicedb:
+    container_name: authservicedb
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=password@12345#  
+    networks:
+      - authnetwork
+  authservice: 
+    container_name: authservice
+    build:
+      context: .
+      dockerfile: AuthService/Dockerfile
+    image: ${DOCKER_REGISTRY-}authservice
+    depends_on:
+      - authservicedb
+    environment:
+      - DB_HOST=authservicedb
+      - DB_NAME=authservicedb
+      - DB_PASSWORD=password@12345# 
+    networks:
+      - authnetwork
+
+  dbpersonskills:
+    container_name: dbpersonskills
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=password@12345#  
+    networks:
+      - authnetwork
+  
+  idz:
+    image: ${DOCKER_REGISTRY-}idz
+    build:
+      context: .
+      dockerfile: IDZ/Dockerfile
+    depends_on:
+      - dbpersonskills
+    environment:
+      - DB_HOST=dbpersonskills
+      - DB_NAME=persondb
+      - DB_PASSWORD=password@12345# 
+      - AuthTokenService=http://authservice/api/Token/
+    networks:
+      - authnetwork
+
